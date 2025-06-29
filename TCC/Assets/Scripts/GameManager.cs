@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    
+    public int moedas = 0;
+    public int vidas = 5;
 
     private void Awake()
     {
@@ -32,26 +35,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.qKey.wasPressedThisFrame)
-        {
-            SceneManager.LoadScene("Level1");
-        }
 
-        if (Keyboard.current.wKey.wasPressedThisFrame)
-        {
-            SceneManager.LoadScene("Level2");
-        }
-
-        if (Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            SceneManager.LoadScene("Level3");
-        }
     }
-
     public void LoadGameAndGUI()
-    {
-        SceneManager.LoadScene("Game");
-        SceneManager.LoadScene("GUI", LoadSceneMode.Additive);
-    }
+        {
+            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("GUI", LoadSceneMode.Additive);
+        }
 
-}
+    }
