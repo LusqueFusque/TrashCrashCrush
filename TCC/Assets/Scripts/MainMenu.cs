@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
     public void OnStartClick()
     {
         GameManager gameManager = FindObjectOfType<GameManager>();
-        gameManager.LoadScene("Game");
+        gameManager.LoadScene("Tutorial");
     }
 
     public void OnQuitClick()

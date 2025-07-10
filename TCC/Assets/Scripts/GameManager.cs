@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     }
     public void LoadGameAndGUI()
         {
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("Tutorial");
             SceneManager.LoadScene("GUI", LoadSceneMode.Additive);
         }
 
